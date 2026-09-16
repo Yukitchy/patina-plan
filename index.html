@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PATINA — レザークラフトPodcast 企画書</title>
+<meta property="og:title" content="PATINA — レザークラフトPodcast 企画書">
+<meta property="og:description" content="革職人ひげちゃんとツアーガイドのユウキが革の話をする番組の企画書。9/18打ち合わせ用。">
+<meta property="og:image" content="https://yukitchy.github.io/patina-plan/images/p1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{--ink:#000;--sub:#333;--mist:#e5e7eb;--fog:#f0efe7;--sand:#f5ebd5;--en:"Instrument Sans","Zen Kaku Gothic New",sans-serif;--jp:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--jp);font-size:15px;line-height:1.9;-webkit-font-smoothing:antialiased}
+body,p,li,td,th,div,span,b,small,h1,h2,h3{word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere}
+h1,h2,h3{margin:0;line-height:1.3;text-wrap:balance;font-weight:400}
+p{margin:0;text-wrap:pretty}
+a{color:inherit}
+.en{font-family:var(--en);letter-spacing:.025em}
+.ann{background:#000;color:#fff;font-family:var(--en);font-size:12px;text-align:center;padding:6px 12px;letter-spacing:.08em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 32px;border-bottom:1px solid #000;font-family:var(--en);font-size:13px;font-weight:500;letter-spacing:.06em}
+nav b{font-size:24px;font-weight:600;letter-spacing:.1em}
+.shots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
+.shots img{width:100%;aspect-ratio:9/13;object-fit:cover;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+.hero{padding:64px 0 56px;max-width:760px}
+.eyebrow{font-family:var(--en);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sub)}
+.hero h1{font-family:var(--en);font-size:48px;letter-spacing:.02em;line-height:1.1;margin:14px 0 6px}
+.hero .jp{font-size:19px;font-weight:500;letter-spacing:.1em;margin-bottom:18px}
+.hero .lead{font-size:16px;color:var(--sub);max-width:36em}
+.hosts{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;margin-top:28px;padding-top:18px;border-top:1px solid #000;font-size:14px;color:var(--sub)}
+.hosts b{display:block;color:#000;font-weight:700;font-size:15px}
+section{padding:64px 0 0}
+section h2{font-family:var(--en);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid #000}
+section h2 span{font-family:var(--jp);font-weight:700;letter-spacing:0;font-size:22px;display:block;text-transform:none;margin-top:4px}
+section .sub{color:var(--sub);font-size:14px;margin:12px 0 0}
+.rows{list-style:none;margin:8px 0 0;padding:0}
+.rows li{display:grid;grid-template-columns:260px 1fr;gap:8px 32px;padding:18px 0;border-bottom:1px solid var(--mist);align-items:baseline}
+.rows .n{font-family:var(--en);font-size:24px;line-height:1.2}
+.rows .n small{display:block;font-family:var(--jp);font-size:13px;color:var(--sub);margin-top:2px}
+.rows .n i{font-style:normal;font-family:var(--jp);font-size:11px;letter-spacing:.14em;color:#000;border:1px solid #000;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.rows .why{font-size:14px;color:var(--sub)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.corner{padding:20px 0;border-bottom:1px solid var(--mist)}
+.corner h3{font-size:17px;font-weight:700}
+.corner p{font-size:14px;color:var(--sub);margin-top:4px}
+.feat{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;margin-top:28px;align-items:start}
+.feat img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.feat h3{font-family:var(--en);font-size:32px;line-height:1.15}
+.feat h3 small{display:block;font-family:var(--jp);font-size:13px;letter-spacing:.1em;color:var(--sub);margin-bottom:8px}
+.feat p{font-size:15px;color:var(--sub);margin:14px 0 20px}
+.eps{list-style:none;margin:0;padding:0;counter-reset:ep}
+.eps li{counter-increment:ep;display:grid;grid-template-columns:36px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--mist);font-size:14px}
+.eps li::before{content:counter(ep,decimal-leading-zero);font-family:var(--en);color:#000}
+.road{list-style:none;margin:8px 0 0;padding:0}
+.road li{display:grid;grid-template-columns:140px 1fr;gap:8px 32px;padding:16px 0;border-bottom:1px solid var(--mist)}
+.road .when{font-family:var(--en);font-size:14px;letter-spacing:.06em}
+.road .what{font-size:16px;font-weight:700}
+.road p{font-size:14px;color:var(--sub)}
+.plain{list-style:none;margin:8px 0 0;padding:0}
+.plain li{padding:14px 0;border-bottom:1px solid var(--mist);font-size:15px}
+.plain li b{display:block;font-weight:700}
+.plain li span{color:var(--sub);font-size:14px}
+.agenda li{display:grid;grid-template-columns:64px 1fr;gap:16px}
+.agenda .t{font-family:var(--en);letter-spacing:.06em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:20px}
+.stat{background:var(--fog);padding:22px 20px 18px;min-height:150px}
+.stat .v{font-family:var(--en);font-size:38px;line-height:1;letter-spacing:-.01em}
+.stat .v small{font-size:16px;letter-spacing:0;margin-left:2px}
+.stat .l{font-size:13px;color:var(--sub);margin-top:10px;line-height:1.6}
+.rival{width:100%;border-collapse:collapse;margin-top:20px;font-size:13.5px}
+.rival th{font-family:var(--en);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:left;font-weight:600;padding:8px 12px 8px 0;border-bottom:1px solid #000;color:var(--sub)}
+.rival td{padding:12px 12px 12px 0;border-bottom:1px solid var(--mist);vertical-align:top;color:var(--sub)}
+.rival td:first-child{color:#000;font-weight:700}
+.rival td a{color:var(--sub)}
+.gap{margin-top:28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
+.gap div{background:var(--sand);padding:24px 22px}
+.gap b{display:block;font-size:16px;margin-bottom:6px}
+.gap p{font-size:14px;color:var(--sub)}
+.note{font-size:12.5px;color:var(--sub);margin-top:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:56px}
+.split img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block}
+footer{margin-top:64px;padding:24px 32px 40px;border-top:1px solid #000;font-family:var(--en);font-size:12px;letter-spacing:.06em;color:var(--sub);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.src{font-size:12px;color:var(--sub);margin-top:16px;line-height:1.8}
+.src a{color:var(--sub)}
+.scroll{overflow-x:auto}
+:focus-visible{outline:2px solid #000;outline-offset:2px}
+@media(max-width:760px){
+  nav{padding:12px 20px}
+  nav b{font-size:20px}
+  .wrap{padding:0 20px}
+  .hero{padding:44px 0 40px}
+  .hero h1{font-size:40px}
+  .hosts,.grid2,.feat,.split,.gap{grid-template-columns:1fr}
+  .rows li,.road li{grid-template-columns:1fr;gap:4px}
+  .stats{grid-template-columns:1fr 1fr}
+  .rival{min-width:640px}
+  footer{padding:24px 20px 40px}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">LEATHER CRAFT PODCAST — FIRST RECORDING 2026.09.18 13:00 NAKAMEGURO</div>
+<nav><span>SHOW &nbsp; CORNERS &nbsp; MARKET</span><b>PATINA</b><span>NAKAMEGURO</span></nav>
+<div class="shots"><img src="images/p1.jpg" alt="工房で革をチェックするひげちゃん"><img src="images/p2.jpg" alt="ワークショップで革を縫う参加者"><img src="images/p4.jpg" alt="工房で靴を作る海外からの参加者"></div>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">A podcast about leather, from a workshop in Nakameguro</div>
+    <h1>Patina</h1>
+    <div class="jp">なめしトーク</div>
+    <p class="lead">革職人ひげちゃんと、ツアーガイドのユウキが革の話をする番組。Patinaは使い込んだ革に出る艶のこと。使うほど味が出る革と同じで、回を重ねるほど番組も育つ。</p>
+    <div class="hosts">
+      <div><b>ひげちゃん（RIO）</b>アールアトリエ中目黒。2016年から会員制の革工房。栃木レザーのサンダルと、靴・バッグのワークショップ。Instagram 5.2万人</div>
+      <div><b>ユウキ</b>秋葉原アニメツアーのガイド、日本語教師。Podcastを8番組、編集から配信まで自分でやっている</div>
+    </div>
+  </header>
+
+  <section id="names">
+    <h2>Show name<span>番組名 8案</span></h2>
+    <p class="sub">全部、革の現場で実際に使う言葉。日本語の副題は「なめしトーク」で固定して、英語の本題を当日1つ選ぶ。</p>
+    <ul class="rows">
+      <li><span class="n">Patina<i>ユウキの推し</i><small>パティナ。使い込んだ革に出る艶</small></span><span class="why">経年変化を1語で言い切る。革好きなら誰でも知っていて、他の分野の人には少し謎めいて聞こえる。短くてロゴにしやすい。</span></li>
+      <li><span class="n">Tan Lines<small>タン・ラインズ。鞣す＝tan、話の筋＝lines</small></span><span class="why">「なめしトーク」の英語版。タン色の革、ステッチの線、日焼け跡の三重の意味で遊べる。</span></li>
+      <li><span class="n">Hide &amp; Seek<small>ハイド・アンド・シーク。hide＝革（原皮）</small></span><span class="why">かくれんぼ。革を探す番組という意味になる。一番キャッチーで、外国人ゲスト回とも相性がいい。</span></li>
+      <li><span class="n">Full Grain<small>フルグレイン。銀面を削らない最上級の革</small></span><span class="why">「本物の話しかしない」という宣言になる。硬派。</span></li>
+      <li><span class="n">Aging Well<small>エイジング・ウェル。いい歳の取り方</small></span><span class="why">革も人も。ライフスタイル寄りに広げたい時の名前。</span></li>
+      <li><span class="n">Stitch by Stitch<small>スティッチ・バイ・スティッチ。一針ずつ</small></span><span class="why">連載「ユウキ、財布を作る」の進み方そのもの。長く続ける番組の名前として強い。</span></li>
+      <li><span class="n">The Burnish<small>ザ・バーニッシュ。コバ磨き</small></span><span class="why">仕上げの工程。職人の番組であることが一番出る。通好み。</span></li>
+      <li><span class="n">Leather Craft Radio<small>レザークラフト・レディオ</small></span><span class="why">説明そのまま。検索には一番強いが、名前としての驚きは無い。保険の1案。</span></li>
+    </ul>
+  </section>
+
+  <section id="corners">
+    <h2>Corners<span>コーナー企画 8本</span></h2>
+    <p class="sub">毎回2本を組み合わせて30分。どれも準備ゼロで話せる。</p>
+    <div class="grid2">
+      <div class="corner"><h3>革の身の上相談</h3><p>リスナーの革製品の悩み（カビ・シミ・傷・ほつれ）に職人が即答。写真はInstagramのDMで受ける。</p></div>
+      <div class="corner"><h3>10年後のこの財布</h3><p>ゲストの持ち物を見て経年変化を予言。半年後に答え合わせ回をやる。</p></div>
+      <div class="corner"><h3>工房ASMR 5分</h3><p>菱目打ち・手縫い・コバ磨きの音だけ。毎回の頭に固定で流すジングルにもなる。</p></div>
+      <div class="corner"><h3>職人の道具箱</h3><p>1回に1道具。値段と買った店まで言う。</p></div>
+      <div class="corner"><h3>革の値段クイズ</h3><p>原価と売値を当てる。ユウキが毎回外す。</p></div>
+      <div class="corner"><h3>外国人ゲスト縫ってみた</h3><p>ユウキのツアー客が工房で体験。感想は英語のまま流して日本語で解説する。</p></div>
+      <div class="corner"><h3>産地ロケ</h3><p>姫路・栃木・滋賀の革の街へ。ひげちゃんの仲間の工房を訪ねる。</p></div>
+      <div class="corner"><h3>持ち込み修理ライブ</h3><p>収録中に壊れた革製品を直す。作業音込みで1本になる。</p></div>
+    </div>
+  </section>
+
+  <section id="series">
+    <h2>Series<span>連載企画</span></h2>
+    <div class="feat">
+      <img src="images/p5.jpg" alt="工房で手縫いをするひげちゃんの手元">
+      <div>
+        <h3><small>全6回 / 各回30分</small>ユウキ、財布を作る</h3>
+        <p>素人のユウキがゼロから二つ折り財布を作る。毎回30分の作業をそのまま録り、進み具合はInstagramに写真で出す。最終回で完成品をリスナーにプレゼント。ワークショップの疑似体験になるので、聞いた人がそのまま予約に来る。</p>
+        <ol class="eps">
+          <li>革を選ぶ。栃木レザーと他の革の違い</li>
+          <li>型紙と裁断</li>
+          <li>菱目打ち</li>
+          <li>手縫い</li>
+          <li>コバ磨き</li>
+          <li>完成。リスナーにプレゼント</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h2>Roadmap<span>ロードマップ</span></h2>
+    <ol class="road">
+      <li><span class="when">2026.09.18</span><div><div class="what">打ち合わせと同時にパイロット収録</div><p>企画を決めたその場で30分録る。録れたものがそのまま第0回。</p></div></li>
+      <li><span class="when">09月中</span><div><div class="what">番組名とジングルを確定</div><p>工房ASMRの音からジングルを切り出す。編集と配信はユウキ側の仕組みでやる。</p></div></li>
+      <li><span class="when">10月</span><div><div class="what">第1回から第3回を公開</div><p>月2本。財布連載の第1回もここで始める。</p></div></li>
+      <li><span class="when">11月</span><div><div class="what">外国人ゲスト回</div><p>ユウキのツアーで来たゲストが工房で縫う。</p></div></li>
+      <li><span class="when">冬</span><div><div class="what">産地ロケ 姫路</div><p>革の街を歩く回。ひげちゃんの仲間を訪ねる。</p></div></li>
+    </ol>
+  </section>
+
+  <section id="distribution">
+    <h2>Distribution<span>配信の仕掛け</span></h2>
+    <ul class="plain">
+      <li><b>60秒の切り抜きを1回につき3本</b><span>Instagramのリールで5.2万人に流す。切り抜きの仕組みはユウキ側に既にある。</span></li>
+      <li><b>聞いた人の特典</b><span>「番組聞いた」でワークショップに小さな特典。中身は当日決める。</span></li>
+      <li><b>YouTubeに手元映像つきで同時公開</b><span>工房の既存チャンネルを使う。音声だけでなく手元が見える。</span></li>
+      <li><b>番組キット</b><span>財布連載と同じ材料のセットを通販で売る。聞きながら一緒に作れる。</span></li>
+    </ul>
+  </section>
+
+  <section id="market">
+    <h2>Market<span>市場調査</span></h2>
+    <p class="sub">2026年9月時点で公開されている数字だけ。確認できなかったものは「未確認」と書いている。</p>
+    <div class="stats">
+      <div class="stat"><div class="v">18.2<small>%</small></div><div class="l">日本のPodcast利用率（15〜69歳、2025年12月調査）。15〜19歳は40.5%、20代は28.8%</div></div>
+      <div class="stat"><div class="v">54.8<small>%</small></div><div class="l">番組をきっかけに実際に購入・訪問したPodcastユーザーの割合。検索した人は66.4%</div></div>
+      <div class="stat"><div class="v">1<small>本</small></div><div class="l">「レザークラフト」を正面から掲げた日本語Podcast。革日和podcast（12話・2025年開始）のみ</div></div>
+      <div class="stat"><div class="v">7.3<small>万人</small></div><div class="l">YouTube「レザークラフト塾」の登録者。HAKUは3.6万人、ittenレザークラフトchは2.0万人。音声側の受け皿が空いている</div></div>
+    </div>
+
+    <div class="scroll">
+    <table class="rival">
+      <thead><tr><th>番組</th><th>誰が</th><th>話数 / 頻度</th><th>形式</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://podcasts.apple.com/jp/podcast/id1793155086">革日和podcast</a></td><td>ムラキ（革の請負職人）</td><td>12話 / 2025年〜不定期</td><td>1人語り＋対談。革・鞄・靴・皮革業界・お金</td></tr>
+        <tr><td><a href="https://podcasts.apple.com/jp/podcast/id1634767370">週末のパブでおしゃべり</a></td><td>額縁職人×靴職人（ロンドン）</td><td>180話 / 毎週土曜</td><td>対談。英国文化と職人技</td></tr>
+        <tr><td><a href="https://stand.fm/channels/607ec585eeca46c0abd9a601">聴くだけハンドメイド販売ラジオ</a></td><td>ハンドメイド販売アドバイザー</td><td>688配信 / 月水金</td><td>1人語り。作り手の売り方</td></tr>
+        <tr><td><a href="https://odinleathergoods.com/pages/beyond-the-workbench-podcast">Beyond the Workbench</a>（米）</td><td>革職人×マーケ担当</td><td>34話 / 隔週</td><td>対談。自社ECの集客導線として運用</td></tr>
+        <tr><td><a href="https://open.spotify.com/show/5XouDAvcgGEALkodSFhcMg">Leathercraft Masterclass</a>（英）</td><td>Philip Jury</td><td>2018年〜（話数・頻度は未確認）</td><td>工具・ビジネス・リスナー質問</td></tr>
+        <tr><td><a href="https://leathershoppod.com/">The Leather Shop Podcast</a>（米）</td><td>Matt Roach</td><td>約12話 / 2〜3ヶ月おき</td><td>職人・創業者インタビュー</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <ul class="plain" style="margin-top:28px">
+      <li><b>潜在リスナーの財布</b><span>minneは累計流通額1,000億円（2023年6月）、作家87万件、作品1,635万点。Creemaは流通165億円、クリエイター28万人。国内ハンドメイド市場は顕在約400億円、潜在3,030億円（クリーマIR）。</span></li>
+      <li><b>東京のレザークラフト体験</b><span>3,300円〜が相場。例: ゆう工房青山 4,580円、関口靴工房の手縫い革靴 14,000円。海外向けは自由が丘のワークショップが約$13.58〜（1.5時間、英日バイリンガル）、JAPAN LEATHER JOURNALのコインケースが2,750円〜（30分）。東京都の観光メディアは墨田・台東の革職人を特集していて、「東京の革」は既にインバウンド商材になっている。</span></li>
+      <li><b>成功例</b><span>ゆる言語学ラジオは「言語」というニッチ一点に絞って伸び、2026年のJAPAN PODCAST AWARDSで大賞。米国のBeyond the Workbenchは革職人が自社通販サイトに番組ページを置き、番組を店の入口にしている。</span></li>
+      <li><b>未確認</b><span>Instagramの #レザークラフト 投稿数、日本のレザークラフト教室市場の規模、Viator・Klook・GetYourGuideの東京レザー体験の掲載件数。</span></li>
+    </ul>
+
+    <div class="gap">
+      <div><b>職人×ガイドの対談が無い</b><p>既存の日本語番組は職人の1人語り、ロンドン在住の職人2人、販売ノウハウの3種類。作り手と外から来た人が同じテーブルに乗る番組が無い。</p></div>
+      <div><b>外国人に説明する層が空いている</b><p>英語圏の競合は全部「作り方と稼ぎ方」の内向き。東京の革工房を外国人に説明する番組はどちらの言語にも無い。英語版と体験の導線に直結できる。</p></div>
+      <div><b>到達力が最初からある</b><p>会員制工房とInstagram 5.2万人。ニッチに絞って深掘りする音声を、工房とワークショップで回収する形が最初から組める。</p></div>
+    </div>
+    <p class="src">出典: <a href="https://otonal.co.jp/news/50748">オトナル×朝日新聞社 第6回ポッドキャスト国内利用実態調査（2026年2月）</a> / <a href="https://netkeizai.com/articles/detail/9045">minne 流通額</a> / <a href="https://www2.jpx.co.jp/disc/40170/140120220414521978.pdf">クリーマ IR資料</a> / <a href="https://activityjapan.com/feature/tokyo_leather_craft/">アクティビティジャパン 東京レザークラフト体験</a> / <a href="https://theabroadguide.com/tokyo-original-leather-accessory-making-workshop/">自由が丘ワークショップ</a> / <a href="https://att-japan.net/en/tokyo_leather/">att.JAPAN Tokyo Leather</a> / <a href="https://www.youtube.com/@yurugengo">ゆる言語学ラジオ</a></p>
+  </section>
+
+  <section id="meeting">
+    <h2>Meeting<span>9月18日 13:00 の進行</span></h2>
+    <p class="sub">60分。最後の10分で録る。</p>
+    <ul class="plain agenda">
+      <li><span class="t">10分</span><span>お互いのゴール確認。何が起きたら成功か</span></li>
+      <li><span class="t">15分</span><span>番組名を8案から選ぶ。コーナーを2〜3本に絞る</span></li>
+      <li><span class="t">15分</span><span>形式。工房で収録・月2本・30分・Spotifyと既存YouTube</span></li>
+      <li><span class="t">10分</span><span>分担。ひげちゃんは話すとInstagramで告知。ユウキは編集・配信・ネタ帳</span></li>
+      <li><span class="t">10分</span><span>パイロット収録。初回ネタは「ひげちゃんはなぜ革職人になったか」</span></li>
+    </ul>
+    <p class="sub" style="margin-top:32px">当日決めること</p>
+    <ul class="plain">
+      <li>番組で一番欲しいものはどれか。教室の予約、通販、ただ楽しい</li>
+      <li>Instagramのストーリーズやリールで音声に誘導してよいか</li>
+      <li>既存のYouTubeチャンネルに音声版を流してよいか</li>
+      <li>工房で収録できるか。作業音が入る方が番組の色になる</li>
+      <li>月2本なら続けられるか。無理なら月1本で固定</li>
+    </ul>
+  </section>
+
+  <div class="split"><img src="images/p3.jpg" alt="修了証を持つワークショップ参加者とひげちゃん"><img src="images/p2.jpg" alt="ワークショップで革を縫う参加者"></div>
+</div>
+
+<footer><span>PATINA — LEATHER CRAFT PODCAST PLAN</span><span>PHOTOS: R ATELIER NAKAMEGURO (YOUTUBE)</span><span>2026.09.16</span></footer>
+</body>
+</html>
