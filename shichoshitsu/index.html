@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Patina 第0回 試聴室</title>
+<title>第0回 試聴室</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@700&display=swap">
 <style>
@@ -44,6 +44,11 @@ textarea{min-height:110px;resize:vertical}
 .btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
 :focus-visible{outline:2px solid var(--leather);outline-offset:2px}
 .foot{font-size:12px;color:var(--muted)}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.th{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.th img{display:block;width:100%;height:auto;aspect-ratio:1}
+.th figcaption{font-size:13px;color:var(--muted);padding:6px 10px}
+.th figcaption b{color:var(--leather);font-size:16px;margin-right:8px}
 .bunko article{padding:22px}
 .bunko h3{font-size:18px;margin:28px 0 6px;font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif}
 .bunko h3.bt{font-size:24px;margin:0 0 8px}
@@ -59,7 +64,7 @@ textarea{min-height:110px;resize:vertical}
 <body>
 <div class="wrap">
 <header>
- <p class="eyebrow">PATINA ・ 第0回</p>
+ <p class="eyebrow">ひげちゃん×ユウキ ・ 第0回</p>
  <h1>試聴ページ</h1>
 </header>
 
@@ -92,8 +97,14 @@ textarea{min-height:110px;resize:vertical}
  <audio id="full" controls preload="none" src="audio/full.mp3"></audio>
 </section>
 
+<section>
+ <h2>3. サムネを選ぶ</h2>
+ <p class="muted">番組のカバー画像の候補です。1〜4と5〜8は文字の色違いで、写真の色味は同じ順に並んでいます。いいと思う番号を教えてください。</p>
+ <div class="thumbs"><figure class="th"><img src="thumbs/1.jpg" alt="サムネ案1" loading="lazy" width="900" height="900"><figcaption><b>1</b>文字 赤橙・写真 カラー</figcaption></figure><figure class="th"><img src="thumbs/2.jpg" alt="サムネ案2" loading="lazy" width="900" height="900"><figcaption><b>2</b>文字 赤橙・写真 モノクロ</figcaption></figure><figure class="th"><img src="thumbs/3.jpg" alt="サムネ案3" loading="lazy" width="900" height="900"><figcaption><b>3</b>文字 赤橙・写真 あたたかめ</figcaption></figure><figure class="th"><img src="thumbs/4.jpg" alt="サムネ案4" loading="lazy" width="900" height="900"><figcaption><b>4</b>文字 赤橙・写真 明るめ</figcaption></figure><figure class="th"><img src="thumbs/5.jpg" alt="サムネ案5" loading="lazy" width="900" height="900"><figcaption><b>5</b>文字 サドルタン・写真 カラー</figcaption></figure><figure class="th"><img src="thumbs/6.jpg" alt="サムネ案6" loading="lazy" width="900" height="900"><figcaption><b>6</b>文字 サドルタン・写真 モノクロ</figcaption></figure><figure class="th"><img src="thumbs/7.jpg" alt="サムネ案7" loading="lazy" width="900" height="900"><figcaption><b>7</b>文字 サドルタン・写真 あたたかめ</figcaption></figure><figure class="th"><img src="thumbs/8.jpg" alt="サムネ案8" loading="lazy" width="900" height="900"><figcaption><b>8</b>文字 サドルタン・写真 明るめ</figcaption></figure></div>
+</section>
+
 <section class="bunko">
- <h2>3. 文庫（読み物）</h2>
+ <h2>4. 文庫（読み物）</h2>
  <p class="muted">この回を文字で読めるようにしたものです。時刻を押すと、上の本編がその場所から流れます。</p>
  <article class="card">
   <p class="eyebrow">2026-09-24 ・ 約12分で読めます</p>
