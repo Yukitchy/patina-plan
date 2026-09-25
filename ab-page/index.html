@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>patina #1 聴き比べ</title>
+<style>
+:root{--ink:#1f1a17;--sub:#7a6f68;--line:#e8e2dc;--acc:#a0522d;--bg:#fbf9f7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"Hiragino Sans",sans-serif}
+main{max-width:560px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:22px;margin:0 0 4px}
+.lead{color:var(--sub);font-size:14px;margin:0 0 24px}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.ab button{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:14px 10px;font:inherit;cursor:pointer;text-align:left}
+.ab button b{display:block;font-size:17px}
+.ab button span{font-size:12px;color:var(--sub)}
+.ab button.on{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc)}
+.ab button.on b{color:var(--acc)}
+.bar{display:flex;align-items:center;gap:12px;margin:8px 0 6px}
+#play{width:52px;height:52px;border-radius:50%;border:0;background:var(--acc);color:#fff;font-size:20px;cursor:pointer;flex:none}
+#seek{flex:1;accent-color:var(--acc)}
+#time{font-variant-numeric:tabular-nums;font-size:13px;color:var(--sub);min-width:92px;text-align:right}
+.hint{font-size:12px;color:var(--sub);margin:0 0 28px}
+h2{font-size:14px;color:var(--sub);font-weight:600;margin:0 0 8px;border-top:1px solid var(--line);padding-top:18px}
+.jump{list-style:none;padding:0;margin:0 0 28px}
+.jump li button{all:unset;cursor:pointer;display:flex;gap:12px;width:100%;padding:9px 2px;border-bottom:1px solid var(--line);font-size:15px}
+.jump li button em{font-style:normal;color:var(--acc);font-variant-numeric:tabular-nums;min-width:44px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:7px 4px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--sub);font-weight:500}
+td.num{font-variant-numeric:tabular-nums}
+.ng{color:#b3261e;font-weight:600}.ok{color:#2e7d32;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>patina #1 聴き比べ</h1>
+<p class="lead">同じ位置のままAとBを切り替えられます。発言や尺は同じで、声の音量のならし方だけが違います。</p>
+
+<div class="ab">
+  <button id="bA" class="on" onclick="sw('a')"><b>A 公開中</b><span>いまSpotifyに出ている版</span></button>
+  <button id="bB" onclick="sw('b')"><b>B 修正版</b><span>抑揚を残した版</span></button>
+</div>
+<div class="bar">
+  <button id="play" aria-label="再生">▶</button>
+  <input id="seek" type="range" min="0" max="1205" step="0.1" value="0" aria-label="再生位置">
+  <span id="time">0:00 / 20:05</span>
+</div>
+<p class="hint">PCならキーボードのAとBで切り替え、スペースで再生・停止できます。</p>
+
+<h2>ここから聴く</h2>
+<ul class="jump">
+  <li><button data-t="19"><em>0:19</em>中目黒のRアトリエ</button></li>
+  <li><button data-t="117"><em>1:57</em>11番組目にレザークラフトを選んだ理由</button></li>
+  <li><button data-t="235"><em>3:55</em>ひげちゃんの経歴と栃木レザー</button></li>
+  <li><button data-t="402"><em>6:42</em>客の8割が外国人のワークショップ</button></li>
+  <li><button data-t="578"><em>9:38</em>海外の人は高値を払ってくれる</button></li>
+  <li><button data-t="700"><em>11:40</em>誰に聞いてほしいか</button></li>
+  <li><button data-t="866"><em>14:26</em>番組名はパティーナ系でいく</button></li>
+</ul>
+
+<h2>計測値</h2>
+<table>
+  <tr><th></th><th>A 公開中</th><th>B 修正版</th><th>基準</th></tr>
+  <tr><td>抑揚の幅 LRA</td><td class="num ng">4.7</td><td class="num ok">8.2</td><td>6〜11</td></tr>
+  <tr><td>音量 LUFS</td><td class="num">-16.2</td><td class="num">-16.5</td><td>-16±1</td></tr>
+  <tr><td>ピーク dBTP</td><td class="num">-1.9</td><td class="num">-1.8</td><td>-1.0以下</td></tr>
+  <tr><td>声と環境音の差 dB</td><td class="num">24.5</td><td class="num">26.4</td><td>15以上</td></tr>
+</table>
+</main>
+
+<audio id="a" src="a.mp3" preload="auto"></audio>
+<audio id="b" src="b.mp3" preload="auto"></audio>
+<script>
+const A=document.getElementById('a'),B=document.getElementById('b');
+let cur=A;const $=id=>document.getElementById(id);
+const fmt=s=>{s=Math.max(0,s|0);return (s/60|0)+':'+String(s%60).padStart(2,'0')};
+function sw(k){
+  const nx=k==='a'?A:B; if(nx===cur) return;
+  const t=cur.currentTime, playing=!cur.paused;
+  cur.pause(); nx.currentTime=t; cur=nx;
+  if(playing) nx.play();
+  $('bA').classList.toggle('on',k==='a'); $('bB').classList.toggle('on',k==='b');
+}
+function toggle(){ cur.paused?cur.play():cur.pause(); }
+$('play').onclick=toggle;
+[A,B].forEach(x=>{
+  x.addEventListener('play',()=>{if(x===cur)$('play').textContent='❚❚'});
+  x.addEventListener('pause',()=>{if(x===cur)$('play').textContent='▶'});
+  x.addEventListener('timeupdate',()=>{if(x!==cur)return;$('seek').value=x.currentTime;$('time').textContent=fmt(x.currentTime)+' / 20:05'});
+});
+$('seek').oninput=e=>{cur.currentTime=+e.target.value};
+document.querySelectorAll('.jump button').forEach(b=>b.onclick=()=>{cur.currentTime=+b.dataset.t;cur.play()});
+document.addEventListener('keydown',e=>{
+  if(e.key==='a'||e.key==='A')sw('a');
+  else if(e.key==='b'||e.key==='B')sw('b');
+  else if(e.key===' '){e.preventDefault();toggle()}
+});
+</script>
+</body>
+</html>
