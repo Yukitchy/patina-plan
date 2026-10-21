@@ -47,7 +47,7 @@ a{color:inherit}
 .idx a span{color:var(--tan-ink);font-size:15px}
 
 main{max-width:1040px;margin:0 auto;padding:0 var(--gutter) 96px}
-main>section{max-width:720px}
+
 section{padding-top:72px}
 .sh{display:flex;align-items:baseline;gap:14px;margin:0 0 6px}
 .sh .num{font-size:44px;line-height:1;color:var(--tan-ink)}
@@ -102,16 +102,20 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
 
 @media(min-width:900px){
   :root{--gutter:32px}
-  .hero-in{grid-template-columns:1fr 1fr;align-items:stretch}
+  .hero-in{max-width:none;grid-template-columns:1fr 1fr;align-items:stretch}
   .logo{font-size:clamp(120px,13vw,168px)}
-  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:48px 40px 48px var(--gutter)}
+  .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:56px 48px 56px max(var(--gutter),calc((100vw - 1040px)/2 + var(--gutter)))}
   .hero-photo img{height:100%;aspect-ratio:auto}
   .idx ol{grid-template-columns:repeat(4,1fr);column-gap:24px}
   .tl .hot{margin:0 -20px;padding:14px 20px}
   .pull{margin-left:0;margin-right:0;padding:28px 32px}
-  .cards{grid-template-columns:1fr 1fr}
-  .cards .wide{grid-column:1/-1}
-  section{padding-top:96px}
+  section{padding-top:96px;display:grid;grid-template-columns:280px minmax(0,640px);column-gap:72px;align-items:start}
+  .sec-head{position:sticky;top:32px}
+  .sh{flex-direction:column;gap:10px}
+  .lead{margin:12px 0 0}
+  .sec-body{padding-top:6px}
+  .tl .hot{margin:0 -20px}
+  .sec-body>img{margin-bottom:8px}
 }
 </style>
 </head>
@@ -148,8 +152,8 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
 <main>
 
 <section id="s1">
-  <div class="sh"><span class="num">01</span><h2>​当日の​流れ</h2></div>
-  <p class="lead">15:00に​出れば、​17:00の​みんらじに​間に​合います。</p>
+  <div class="sec-head"><div class="sh"><span class="num">01</span><h2>​当日の​流れ</h2></div><p class="lead">15:00に​出れば、​17:00の​みんらじに​間に​合います。</p></div>
+  <div class="sec-body">
   <ol class="tl">
     <li><time>11:00</time><div><b>​移動</b><small>カレンダーの​予定</small></div></li>
     <li><time>12:00</time><div><b>中目黒駅前に​集合、​ひげちゃんと​ランチ</b><small>ここで​今日の​山を​共有。​質問リストを​一緒に​見る</small></div></li>
@@ -165,12 +169,12 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
     <li><time>13:45</time><div><b>連載 第1回​「革を​選ぶ」 40分</b><small>04の​流れで、​革を​触りながら​録る</small></div></li>
     <li><time>14:30</time><div><b>写真を​撮る、​次回の​日程を​決める</b><small>​連載の​進み具合を​載せる​写真。​次の​収録日は​まだ​決まっていません</small></div></li>
     <li><time>14:45</time><div><b>片付けて​出発</b><small>予備の​15分</small></div></li>
-  </ol>
+  </ol></div>
 </section>
 
 <section id="s2">
-  <div class="sh"><span class="num">02</span><h2>#1の​振り返り</h2></div>
-  <p class="lead">9月24日に​録り、​25日に​公開した回です。​話した​ことと、​まだ​決まっていない​こと。</p>
+  <div class="sec-head"><div class="sh"><span class="num">02</span><h2>#1の​振り返り</h2></div><p class="lead">9月24日に​録り、​25日に​公開した回です。​話した​ことと、​まだ​決まっていない​こと。</p></div>
+  <div class="sec-body">
 
   <div class="pull">
     <q data-src="bunko">うちは​パティーナを​押していこうと​思って、​これから​使っていこうって​いう</q>
@@ -199,12 +203,12 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
     <li><label><input type="checkbox"><span class="q">グッズ、​プレゼント企画、​オフ会<span class="why" data-src="minutes">番組カードや​キーチェーンなど</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">ひげちゃんの​YouTubeチャンネルにも​載せるか<span class="why" data-src="minutes">載せる​場合は​管理権限を​お借りします</span></span></label></li>
   </ul>
-  <p class="note">ランチで​決着済みかを​聞いて、​済んだ​ものに​チェックを​入れてください。</p>
+  <p class="note">ランチで​決着済みかを​聞いて、​済んだ​ものに​チェックを​入れてください。</p></div>
 </section>
 
 <section id="s3">
-  <div class="sh"><span class="num">03</span><h2>#2の​構成</h2></div>
-  <p class="lead">本編30分。​コーナー3本は、​準備ゼロで​話せる​ものから​選びました。</p>
+  <div class="sec-head"><div class="sh"><span class="num">03</span><h2>#2の​構成</h2></div><p class="lead">本編30分。​コーナー3本は、​準備ゼロで​話せる​ものから​選びました。</p></div>
+  <div class="sec-body">
 
   <ol class="tl">
     <li><time>0:00</time><div><b>オープニング</b><small>3分。​#1を​公開して​どうだったか、​ひげちゃんの​周りの​反応</small></div></li>
@@ -221,10 +225,10 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
       <span class="min">7min</span>
       <h4>10年後の​この​コインケース</h4>
       <p>ユウキが​9/24に​工房で​作った​コインケースを​持っていき、​経年変化を​予言して​もらう。​半年後に​答え合わせを​する​回を、​あとで​やる。</p>
-      <p class="ask">持ち物：コインケース。​写真を​撮って​おく</p>
+      <p class="ask">持ち物：コインケース。​写真も​撮る</p>
     </article>
     <article class="card">
-      <img src="img/tools.jpg" width="860" height="560" alt="工房の壁に並ぶ革細工の道具" loading="lazy">
+      <img src="img/tools.jpg" width="860" height="560" alt="道具が並ぶ壁の前で、あごに手を当てて話すひげちゃん">
       <span class="min">7min</span>
       <h4>職人の​道具箱</h4>
       <p>1回に​1道具。​値段と、​どこで​買ったかまで​言う。​#1で、​道具の​名前を​知るだけで​見え方が​変わると​話した​流れ。</p>
@@ -240,13 +244,13 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
       <h4>見送った​コーナー</h4>
       <p>革の​身の​上相談は、​リスナーの​お便りが​要るので、​#2では​見送ります。​工房ASMRの​5分は、​04の​作業中の​音を​録って、​固定ジングルの​素材にします。</p>
     </article>
-  </div>
+  </div></div>
 </section>
 
 <section id="s4">
-  <div class="sh"><span class="num">04</span><h2>ユウキ、​財布を​作る</h2></div>
-  <p class="lead">全6回の​第1回​「革を​選ぶ。​栃木レザーと​他の​革の​違い」。​素人の​ユウキが​ゼロから​二つ折り​財布を​作る​連載です。</p>
-  <img src="img/board.jpg" width="1080" height="680" alt="緑の板にオレンジ色で書かれた patina のロゴ" loading="lazy">
+  <div class="sec-head"><div class="sh"><span class="num">04</span><h2>ユウキ、​財布を​作る</h2></div><p class="lead">​全6回の​第1回​「革を​選ぶ。​栃木レザーと​他の​革の​違い」。​素人の​ユウキが​ゼロから​二つ折り​財布を​作る​連載です。</p></div>
+  <div class="sec-body">
+  <img src="img/board.jpg" width="1080" height="680" alt="緑の板にオレンジ色で書かれた patina のロゴ">
 
   <h3>今回やる​こと</h3>
   <ol class="tl">
@@ -264,12 +268,12 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
     <li>第4回　手縫い</li>
     <li>第5回　コバ磨き</li>
     <li>第6回　完成。​リスナーに​プレゼント</li>
-  </ul>
+  </ul></div>
 </section>
 
 <section id="s5">
-  <div class="sh"><span class="num">05</span><h2>ひげちゃんへの​質問</h2></div>
-  <p class="lead">12問。​#1で​話した​工房の​客層や​名前の​由来は、​聞き直しません。​聞いた​問いに​チェックを​入れてください。</p>
+  <div class="sec-head"><div class="sh"><span class="num">05</span><h2>ひげちゃんへの​質問</h2></div><p class="lead">12問。​#1で​話した​工房の​客層や​名前の​由来は、​聞き直しません。​聞いた​問いに​チェックを​入れてください。</p></div>
+  <div class="sec-body">
 
   <h3>A　革を​選ぶ​（04に​直結）</h3>
   <ul class="chk" data-key="q">
@@ -297,12 +301,12 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
   <ul class="chk" data-key="q">
     <li><label><input type="checkbox"><span class="q">ネタ帳の​データ版は、​送って​もらえそうですか？<span class="why">​狙い​：9/24の​宿題。​ひげちゃんから​LINEで​送って​もらう​約束</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">次の​収録は、​いつ頃が​良いですか？<span class="why">​狙い​：月1回の​目安で​日程を​決める</span></span></label></li>
-  </ul>
+  </ul></div>
 </section>
 
 <section id="s6">
-  <div class="sh"><span class="num">06</span><h2>持ち物・機材</h2></div>
-  <p class="lead">いつもの​機材に​読み替えて、​足りない​行は​消してください。</p>
+  <div class="sec-head"><div class="sh"><span class="num">06</span><h2>持ち物・機材</h2></div><p class="lead">いつもの​機材に​読み替えて、​足りない​行は​消してください。</p></div>
+  <div class="sec-body">
 
   <h3>録る</h3>
   <ul class="chk" data-key="gear">
@@ -322,18 +326,18 @@ footer{max-width:720px;margin:0 auto;padding:32px var(--gutter) 56px;border-top:
     <li><label><input type="checkbox"><span class="q">職人の​道具箱で​話す1道具<span class="why">ランチの​時に​決めて​もらう</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">革の​値段クイズに​出す、​革製品3つ<span class="why">原価と​売値は、​ひげちゃんだけが​知って​おく</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">連載で​並べる​革の​見本<span class="why">栃木レザーと、​ほかの​革を​数種類</span></span></label></li>
-  </ul>
+  </ul></div>
 </section>
 
 <section id="s7">
-  <div class="sh"><span class="num">07</span><h2>収録の​あとで</h2></div>
-  <p class="lead">編集と​配信は、​ユウキ側の​パイプラインで​進めます。</p>
+  <div class="sec-head"><div class="sh"><span class="num">07</span><h2>収録の​あとで</h2></div><p class="lead">​編集と​配信は、​ユウキ側の​パイプラインで​進めます。</p></div>
+  <div class="sec-body">
   <ul class="chk" data-key="after">
     <li><label><input type="checkbox"><span class="q">次の​収録日を、​ひげちゃんと​決める<span class="why">​月1回の​目安</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">連載の​写真を、​Instagramに​載せる<span class="why">​選んだ革を​手に​持った​1枚から</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">録音を​音声の​部屋に​渡す<span class="why">ポン出し編集に​回す。​patina は​登録済み</span></span></label></li>
     <li><label><input type="checkbox"><span class="q">編集版を、​ひげちゃんと​一緒に​聞いてから​公開する<span class="why">​#1と​同じ​手順</span></span></label></li>
-  </ul>
+  </ul></div>
 </section>
 
 </main>
